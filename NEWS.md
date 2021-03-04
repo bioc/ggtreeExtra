@@ -1,7 +1,20 @@
-# ggtreeExtra 1.1.3.991
+# ggtreeExtra 1.1.5.991
+
++ check whether the value of x is numeric to avoid warnings when x is factor. (2021-02-24, Wed)
++ remove axis of first `geom_tile` of vignettes, since the axis of this layer is meaningless. (2021-02-24, wed)
+
+# ggtreeExtra 1.1.5
+
++ support `title` of panel. (2021-02-03, Wed)
+  - <https://github.com/YuLab-SMU/ggtreeExtra/issues/7>
++ add citation info. (2021-02-04, Thu)
++ don't use `svg` dev. (2021-02-04, Thu)
+
+# ggtreeExtra 1.1.4
 
 + add `position_points_jitterx` and `position_raincloudx` for **geom** of `ggridges`. (2021-01-20, Wed)
 + supports `geom_msa` of `ggmsa`. (2021-01-21, Thu)
++ specific `position` method for specific *geom* method automatically. (2021-01-27, Wed)
 
 # ggtreeExtra 1.1.3
 

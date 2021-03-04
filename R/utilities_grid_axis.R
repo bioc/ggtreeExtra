@@ -5,7 +5,7 @@ build_grid <- function(dat, xid, position, grid.params, grid.dot.params){
     newxid <- paste0("new_", xid)
     yr <- range(dat$y)
     daline3 <- dat[,"y",drop=FALSE]
-    if(all(dat$x>=0, na.rm=TRUE) && all(dat[[xid]]<0, na.rm=TRUE)){
+    if(is.numeric(dat[[xid]]) && all(dat$x>=0, na.rm=TRUE) && all(dat[[xid]]<0, na.rm=TRUE)){
         flagrev <- TRUE
     }else{
         flagrev <- FALSE
@@ -49,7 +49,7 @@ build_grid <- function(dat, xid, position, grid.params, grid.dot.params){
 build_axis <- function(dat, xid, text, position, axis.params, axis.dot.params){
     newxid <- paste0("new_", xid)
     yr <- range(dat$y)
-    if(all(dat$x>=0, na.rm=TRUE) && all(dat[[xid]]<0, na.rm=TRUE)){
+    if(is.numeric(dat[[xid]]) &&all(dat$x>=0, na.rm=TRUE) && all(dat[[xid]]<0, na.rm=TRUE)){
         flagrev <- TRUE
     }else{
         flagrev <- FALSE
@@ -69,6 +69,16 @@ build_axis <- function(dat, xid, text, position, axis.params, axis.dot.params){
     obj$position <- position_identityx(hexpand=position$hexpand)
     obj <- c(obj, axis.dot.params)
     obj <- do.call("geom_text", obj)
+    if (!is.null(axis.params$title)){
+        yindex <- ifelse(is.null(axis.params$title.height), 0.1, axis.params$title.height)
+        titledat <- data.frame(x=mean(dat[[newxid]], na.rm=TRUE), y=yr[2]*(1+yindex), label=axis.params$title)
+        titleobj <- list(size=axis.params$title.size, angle=axis.params$title.angle, color=axis.params$title.color)
+        titleobj$data <- titledat
+        titleobj$mapping <- aes_(x=~x, y=~y, label=~label)
+        titleobj$position <- position_identityx(hexpand=position$hexpand)
+        titleobj <- do.call("geom_text", titleobj)
+        obj <- list(obj, titleobj)
+    }
     if (nrow(dat)==1){
         dat2 <- data.frame(x=dat[[newxid]]-yr[1]/8, xend=dat[[newxid]]+yr[1]/8)
     }else{

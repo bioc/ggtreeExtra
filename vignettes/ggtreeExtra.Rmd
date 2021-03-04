@@ -77,7 +77,7 @@ To show the package profiling, I will use a tree file downloaded from [plotTree]
 
 ## 3.1 add single layer
 
-```{r, fig.align="center", fig.height=7, fig.width=7, dpi=300, warning=FALSE, singlelayer}
+```{r, fig.align="center", fig.height=7, fig.width=7, warning=FALSE, singlelayer}
 # The path of tree file.
 trfile <- system.file("extdata", "tree.nwk", package="ggtreeExtra")
 # The path of file to plot tippoint.
@@ -106,37 +106,37 @@ knitr::kable(head(dat3))
 p <- ggtree(tree, layout="fan", open.angle=10, size=0.5)
 p
 
-# Next, we can use %<+% of ggtree to add annotation dataset to tree.
-p1 <- p %<+% dat1
-p1
-# We use geom_star to add point layer outside of tree.
-p2 <- p1 + 
-      geom_star(
-          mapping=aes(fill=Location, size=Length, starshape=Group),
-          starstroke=0.2
-      ) +
-      scale_size_continuous(
-          range=c(1, 3),
-          guide=guide_legend(
-                     keywidth=0.5, 
-                     keyheight=0.5, 
-                     override.aes=list(starshape=15), 
-                     order=2)
-      ) + 
-      scale_fill_manual(
-          values=c("#F8766D", "#C49A00", "#53B400", "#00C094", "#00B6EB", "#A58AFF", "#FB61D7"),
-          guide="none" # don't show the legend.
-      ) + 
-      scale_starshape_manual(
-          values=c(1, 15),
-          guide=guide_legend(
-                    keywidth=0.5, # adjust width of legend
-                    keyheight=0.5, # adjust height of legend
-                    order=1 # adjust the order of legend for multiple legends.
-                ),
-          na.translate=FALSE # to remove the NA legend.
-      ) 
-p2
+## Next, we can use %<+% of ggtree to add annotation dataset to tree.
+#p1 <- p %<+% dat1
+#p1
+## We use geom_star to add point layer outside of tree.
+#p2 <- p1 + 
+#      geom_star(
+#          mapping=aes(fill=Location, size=Length, starshape=Group),
+#          starstroke=0.2
+#      ) +
+#      scale_size_continuous(
+#          range=c(1, 3),
+#          guide=guide_legend(
+#                     keywidth=0.5, 
+#                     keyheight=0.5, 
+#                     override.aes=list(starshape=15), 
+#                     order=2)
+#      ) + 
+#      scale_fill_manual(
+#          values=c("#F8766D", "#C49A00", "#53B400", "#00C094", "#00B6EB", "#A58AFF", "#FB61D7"),
+#          guide="none" # don't show the legend.
+#      ) + 
+#      scale_starshape_manual(
+#          values=c(1, 15),
+#          guide=guide_legend(
+#                    keywidth=0.5, # adjust width of legend
+#                    keyheight=0.5, # adjust height of legend
+#                    order=1 # adjust the order of legend for multiple legends.
+#                ),
+#          na.translate=FALSE # to remove the NA legend.
+#      ) 
+#p2
 
 # Or if we don't use %<+% to add annotation dataset, instead of data parameter of geom_fruit. 
 # You should specify the y column (tip label), here is y=ID.
@@ -181,12 +181,7 @@ p3 <- p2 +
           geom=geom_tile,
           mapping=aes(y=ID, x=Pos, fill=Type),
           offset=0.08,   # The distance between layers, default is 0.03 of x range of tree.
-          pwidth=0.25, # width of the layer, default is 0.2 of x range of tree.
-          axis.params=list(                
-                        axis="x",  # add axis text of the layer.
-                        text.angle=-45, # the text size of axis.
-                        hjust=0  # adust the horizontal position of text of axis.
-                      )
+          pwidth=0.25 # width of the layer, default is 0.2 of x range of tree.
       ) + 
       scale_fill_manual(
           values=c("#339933", "#dfac03"),
@@ -251,7 +246,7 @@ p5
 
 In the section, I will randomly create a tree and associated datasets.
 
-```{r, fig.align="center", fig.width=7, fig.width=7, dpi=300, multilayer}
+```{r, fig.align="center", fig.width=7, fig.width=7, multilayer}
 # To reproduce.
 set.seed(1024)
 # generate 100 tip point tree.
