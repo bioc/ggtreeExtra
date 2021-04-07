@@ -1,3 +1,7 @@
+# ggtreeExtra 1.0.3
+
++ update man and vignettes. (2021-04-06, Tue)
+
 # ggtreeExtra 1.0.2
 
 + push new version (v1.0.2) to RELEASE_3_12. (2021-03-23, Tue)
