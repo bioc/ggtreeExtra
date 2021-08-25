@@ -20,8 +20,8 @@ If you use `ggtreeExtra` in published research. Please cite the paper:
 **S Xu**, Z Dai, P Guo, X Fu, S Liu, L Zhou, W Tang, T Feng, M Chen, L
 Zhan, T Wu, E Hu, Y Jiang<sup>\*</sup>, X Bo<sup>\*</sup> and **G
 Yu**<sup>\*</sup>. ggtreeExtra: Compact visualization of richly
-annotated phylogenetic data. ***Methods in Ecology and Evolution***.
-2021, msab166. doi:
+annotated phylogenetic data. ***Molecular Biology and Evolution***.
+2021, 38(9):4039-4042. doi:
 [10.1093/molbev/msab166](https://doi.org/10.1093/molbev/msab166).
 
   - [Source code to produce Supplementary

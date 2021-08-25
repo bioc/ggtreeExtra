@@ -1,6 +1,18 @@
-# ggtreeExtra 1.3.2
+# ggtreeExtra 1.3.5
+
++ update citation of `ggtreeExtra` (2021-08-25, Wed). 
+
+# ggtreeExtra 1.3.4
+
++ fix the `compute_aes` to better compatible with `ggplot2` (>=3.3.4) (2021-08-09, Mon)
+  - The `ggplot2` (>=3.3.4) introduced `computed_mapping`.
+
+# ggtreeExtra 1.3.3
 
 + update reference. (2021-06-08, Tue)
++ fix vector logical check. (201-06-11, Fri)
+  - c(TRUE, TRUE) && c(TRUE, TRUE) is not allowed in 
+    devel environment of bioconductor 
 
 # ggtreeExtra 1.3.1
 
