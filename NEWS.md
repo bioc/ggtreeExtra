@@ -1,26 +1,13 @@
-# ggtreeExtra 1.3.5
+# ggtreeExtra 1.2.2
 
-+ update citation of `ggtreeExtra` (2021-08-25, Wed). 
++ fix the compute_aes to better compatible with ggplot2 (>=3.3.4)
+ - `x` of mapping supporting function. e.g. `log(x+1)`.
 
-# ggtreeExtra 1.3.4
+# ggtreeExtra 1.2.1
 
-+ fix the `compute_aes` to better compatible with `ggplot2` (>=3.3.4) (2021-08-09, Mon)
-  - The `ggplot2` (>=3.3.4) introduced `computed_mapping`.
++ update citation
 
-# ggtreeExtra 1.3.3
-
-+ update reference. (2021-06-08, Tue)
-+ fix vector logical check. (201-06-11, Fri)
-  - c(TRUE, TRUE) && c(TRUE, TRUE) is not allowed in 
-    devel environment of bioconductor 
-
-# ggtreeExtra 1.3.1
-
-+ `data` argument of `geom_fruit` support function input. (2021-05-20, Thu)
-+ the argument of `axis.params` and `grid.params` can be assigned by intermediate variables. (2021-05-26, Wed)
-  - <https://github.com/YuLab-SMU/ggtreeExtra/issues/9> 
-
-# ggtreeExtra 1.3.0
+# ggtreeExtra 1.2.0
 
 + new version release, and bump new devel version (1.3.0). (2021-05-20, Thu)
 
