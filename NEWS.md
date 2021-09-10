@@ -1,5 +1,6 @@
-# ggtreeExtra 1.2.2
+# ggtreeExtra 1.2.3
 
++ fix the issue of `gridlines` when some data is removed. (2021-08-25, Wed)
 + fix the compute_aes to better compatible with ggplot2 (>=3.3.4)
  - `x` of mapping supporting function. e.g. `log(x+1)`.
 
