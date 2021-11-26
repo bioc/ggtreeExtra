@@ -1,9 +1,6 @@
-# ggtreeExtra 1.5.2
+# ggtreeExtra 1.4.1
 
 + import `geom_text` , which was used in the axis of `geom_fruit` with `do.call`. (2021-11-24, Wed)
-
-# ggtreeExtra 1.5.1
-
 + update the lower limit of reference range in normalization precess. (2021-11-19, Fri)
 
 # ggtreeExtra 1.4.0
