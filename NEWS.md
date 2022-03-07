@@ -1,3 +1,7 @@
+# ggtreeExtra 1.4.2
+
++ update the citation format. (2022-03-07, Mon)
+
 # ggtreeExtra 1.4.1
 
 + import `geom_text` , which was used in the axis of `geom_fruit` with `do.call`. (2021-11-24, Wed)
