@@ -1,4 +1,4 @@
-# ggtreeExtra 1.9.1
+# ggtreeExtra 1.8.1
 
 + import `cli` to avoid warning in checking, which is used by the latest `ggplot2` (2022-11-08, Tue)
 
